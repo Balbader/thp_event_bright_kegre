@@ -7,7 +7,7 @@ class AttendanceMailer < ApplicationMailer
       @user = User.find(@attendance.user_id)
   
       #on définit une variable @url qu'on utilisera dans la view d’e-mail
-      @url  = 'http://thp-event-bright-kegre.herokuapp.com/login'
+      @url  = 'http://monsite.fr/login'
   
       # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
       mail(to: @user.email, subject: 'Participation confirmée !')
