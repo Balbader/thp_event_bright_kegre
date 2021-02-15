@@ -1,5 +1,5 @@
 class AttendanceMailer < ApplicationMailer
-    default from: 'yolo@yopmail.com'
+    default from: 'no-reply@monsite.fr'
 
     def guest_email(attendance)
       #on récupère l'instance user pour ensuite pouvoir la passer à la view en @user
