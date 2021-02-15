@@ -54,7 +54,7 @@ Rails.application.configure do
 
   # Set the delivery method for Letter Opener
   config.action_mailer.delivery_method = :smtp
-  #config.action_mailer.perform_deliveries = true #set to false = turn off perform_deliverie
+  config.action_mailer.perform_deliveries = true #set to false = turn off perform_deliverie
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
