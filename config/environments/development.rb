@@ -56,6 +56,10 @@ Rails.application.configure do
   #config.action_mailer.delivery_method = :letter_opener
   config.action_mailer.perform_deliveries = true #set to false = turn off perform_deliverie
 
+  # Grâce à ça, quand tu cliqueras sur "réinitialiser mon mot de passe" pour la tester, l'application ne plantera pas.
+  # Maintenant tout est réglé pour utiliser Devise. Super !
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 

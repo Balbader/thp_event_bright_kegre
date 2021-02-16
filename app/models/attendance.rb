@@ -1,10 +1,8 @@
 class Attendance < ApplicationRecord
-    after_create :confirmation_send
-
     belongs_to :user
     belongs_to :event
 
-    validates :stripe_customer_id, uniqueness: true
+    after_create :confirmation_send
 
     def confirmation_send
         AttendanceMailer.guest_email(self).deliver_now
