@@ -9,8 +9,8 @@ class Event < ApplicationRecord
         validate :not_in_past
 
     validates :duration,
-        presence: true
-        numericality: { only_integer: true, greater_than: 0 }
+        presence: true,
+        numericality: {only_integer: true, greater_than: 0}
         validate :mustiple_of_5
 
     validates :title,

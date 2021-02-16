@@ -10,14 +10,15 @@
 
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <%= link_to "Accueil", root_path, class: "navbar-brand" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Créer un évènement</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/event/new">Créer un évènement</a>
+        <%= link_to "Créer", new_events_path %>
       </li>
 
       <% if user_signed_in? %>
