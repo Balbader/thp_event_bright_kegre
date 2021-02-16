@@ -31,7 +31,7 @@ class Event < ApplicationRecord
     def not_in_past
         if start_date != nil
             if Time.now > start_date
-                errore.add(:start_date, "La date de votre événement est dépassée !")
+                errors.add(:start_date, "La date de votre événement est dépassée !")
             end
         end
     end
